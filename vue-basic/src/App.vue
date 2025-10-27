@@ -1,11 +1,11 @@
 <template>
   <div>
-    <RefComponent />
+    <SubmitForm />
   </div>
 </template>
 
 <script setup>
-import RefComponent from './components/RefComponent.vue';
+import SubmitForm from './components/SubmitForm.vue';
 </script>
 
 <style scoped>
