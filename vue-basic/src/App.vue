@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Dynamic/>
+    <TeleportComponent />
   </div>
 </template>
 
 <script setup>
-import Dynamic from './components/Dynamic.vue';
+import TeleportComponent from './components/TeleportComponent.vue';
 </script>
 
 <style scoped>
