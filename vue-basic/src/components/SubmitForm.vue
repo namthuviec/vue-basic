@@ -14,8 +14,13 @@
                     v-model="form.passowrd" />
             </div>
 
-            <button type="submit" @click="onSubmitForm">Submit</button>
+            <button type="button" @click="onSubmitForm">Submit</button>
+
+            <p style="color: red;" v-for="error in errors" :key="error.index">
+                {{ error }} is required!
+            </p>
         </form>
+
     </div>
 </template>
 
@@ -26,13 +31,26 @@ export default {
             form: {
                 username: '',
                 passowrd: ''
-            }
+            },
+            errors: []
         }
     },
     methods: {
-        onSubmitForm(e) {
-            e.preventDefault();
-            console.log(this.form)
+        onSubmitForm() {
+            this.errors = [];
+            for (const item in this.form) {
+                if (this.form[item] === '' || this.form[item].length === 0) {
+                    this.errors.push(item);
+                }
+            }
+            if (this.errors.length === 0) {
+                console.log('submit', this.form, JSON.parse(JSON.stringify(this.form)))
+
+            } else {
+                for (const index in this.errors) {
+                    console.log(this.errors[index] + ' is required!')
+                }
+            }
         }
     }
 }
