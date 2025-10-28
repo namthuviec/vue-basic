@@ -1,11 +1,11 @@
 <template>
   <div>
-    <SubmitForm />
+    <ComputedProperty />
   </div>
 </template>
 
 <script setup>
-import SubmitForm from './components/SubmitForm.vue';
+import ComputedProperty from './components/ComputedProperty.vue';
 </script>
 
 <style scoped>
