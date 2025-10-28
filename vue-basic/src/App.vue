@@ -1,11 +1,11 @@
 <template>
   <div>
-    <TeleportComponent />
+    <ParentComponent2 />
   </div>
 </template>
 
 <script setup>
-import TeleportComponent from './components/TeleportComponent.vue';
+import ParentComponent2 from './components/ParentComponent2.vue';
 </script>
 
 <style scoped>
