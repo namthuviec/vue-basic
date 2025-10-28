@@ -1,11 +1,11 @@
 <template>
   <div>
-    <LayoutWithSlots/>
+    <Dynamic/>
   </div>
 </template>
 
 <script setup>
-import LayoutWithSlots from './components/LayoutWithSlots.vue';
+import Dynamic from './components/Dynamic.vue';
 </script>
 
 <style scoped>
